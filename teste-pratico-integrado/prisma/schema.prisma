@@ -24,7 +24,8 @@ model Modalidade{
   id Int @id @default(autoincrement()) @unique
   nome String
   valor Float
-  curso Curso @relation(fields: [id], references: [id])
+  cursoId Int
+  curso Curso @relation(fields: [cursoId], references: [id])
 }
 
 model Futuro_Aluno{
@@ -36,5 +37,6 @@ model Futuro_Aluno{
   CEP String 
   dataNascimento DateTime
   imagemDoocumento String
-  cursoDeInteresse Curso @relation(fields: [id], references: [id])
+  cursoId Int
+  cursoDeInteresse Curso @relation(fields: [cursoId], references: [id])
 }
