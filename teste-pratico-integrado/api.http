@@ -1,1 +1,34 @@
 //http://localhost:3000/
+
+GET http://localhost:3000/curso/
+
+###
+
+GET http://localhost:3000/curso/id/1
+
+###
+
+POST http://localhost:3000/curso
+Content-Type: application/json
+
+{
+    "nome":"direito",
+    "duracao": 5,
+    "tipo":false,
+    "descricao":"curso do integrado"
+}
+
+###
+GET http://localhost:3000/curso/nome/ads
+
+
+### 
+PATCH http://localhost:3000/curso/1
+Content-Type: application/json
+
+{
+    "descricao":"curso do integrado"
+}
+
+###
+DELETE http://localhost:3000/curso/2
