@@ -3,4 +3,6 @@ export class CreateCursoDto {
   duracao: number;
   tipo: boolean;
   descricao: string;
+  modalidade: string;
+  valor: number;
 }

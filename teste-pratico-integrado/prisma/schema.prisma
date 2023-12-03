@@ -13,20 +13,14 @@ datasource db {
 model Curso{
   id Int @id @default(autoincrement()) @unique
   nome String
-  duracao Int
-  tipo Boolean
+  duracao Float
+  tipo String
   descricao String
-  modalidade Modalidade[]
+  modalidade String
+  valor Float
   futurosAlunos Futuro_Aluno[]
 }
 
-model Modalidade{
-  id Int @id @default(autoincrement()) @unique
-  nome String
-  valor Float
-  cursoId Int
-  curso Curso @relation(fields: [cursoId], references: [id])
-}
 
 model Futuro_Aluno{
   id Int @id @default(autoincrement()) @unique

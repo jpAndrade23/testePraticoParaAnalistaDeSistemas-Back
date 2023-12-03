@@ -15,7 +15,9 @@ Content-Type: application/json
     "nome":"direito",
     "duracao": 5,
     "tipo":false,
-    "descricao":"curso do integrado"
+    "descricao":"curso do integrado",
+    "modalidade": "presencial",
+    "valor": 740.09
 }
 
 ###
@@ -27,7 +29,7 @@ PATCH http://localhost:3000/curso/1
 Content-Type: application/json
 
 {
-    "descricao":"curso do integrado"
+    "descricao":"curso presencial do integrado"
 }
 
 ###
