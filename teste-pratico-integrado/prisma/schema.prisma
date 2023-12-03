@@ -14,13 +14,27 @@ model Curso{
   id Int @id @default(autoincrement()) @unique
   nome String
   duracao Float
-  tipo String
   descricao String
-  modalidade String
   valor Float
+  modalidadeId Int
+  modalidade Modalidade @relation(fields: [modalidadeId], references: [id])
+  tipoId Int
+  tipo Tipo @relation(fields: [tipoId], references: [id])
   futurosAlunos Futuro_Aluno[]
 }
 
+model Tipo{
+  id Int @id @default(autoincrement()) @unique
+  nome String
+  cursos Curso[] 
+}
+
+
+model Modalidade{
+  id Int @id @default(autoincrement()) @unique
+  nome String
+  cursos Curso[]
+}
 
 model Futuro_Aluno{
   id Int @id @default(autoincrement()) @unique
