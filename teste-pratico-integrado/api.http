@@ -29,8 +29,41 @@ PATCH http://localhost:3000/curso/1
 Content-Type: application/json
 
 {
-    "descricao":"curso presencial do integrado"
+    "duracao": 2.5
 }
 
 ###
 DELETE http://localhost:3000/curso/2
+
+###
+POST http://localhost:3000/futuro-aluno
+Content-Type: application/json
+
+{
+  "nome": "joao pedro",
+  "CPF": "12335678910",
+  "telefone": "44998176275",
+  "email": "joaopedro@gmail.com",
+  "CEP": "87250-000", 
+  "dataNascimento": "2022-09-27",
+  "imagemDoocumento": "teste",
+  "cursoId": 1
+}
+
+
+###
+GET http://localhost:3000/futuro-aluno
+
+###
+GET http://localhost:3000/futuro-aluno/7
+
+###
+PATCH http://localhost:3000/futuro-aluno/7
+Content-Type: application/json
+
+{
+  "dataNascimento": "2003-09-23"
+}
+
+###
+DELETE http://localhost:3000/futuro-aluno/6

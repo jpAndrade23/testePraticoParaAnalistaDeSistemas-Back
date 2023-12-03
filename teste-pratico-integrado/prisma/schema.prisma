@@ -29,7 +29,7 @@ model Futuro_Aluno{
   telefone String
   email String
   CEP String 
-  dataNascimento DateTime
+  dataNascimento DateTime @db.Date
   imagemDoocumento String
   cursoId Int
   cursoDeInteresse Curso @relation(fields: [cursoId], references: [id])
