@@ -5,8 +5,9 @@ import { PrismaModule } from './prisma/prisma.module';
 import { CursoModule } from './curso/curso.module';
 import { FuturoAlunoModule } from './futuro-aluno/futuro-aluno.module';
 import { ModalidadeModule } from './modalidade/modalidade.module';
+import { TipoModule } from './tipo/tipo.module';
 @Module({
-  imports: [PrismaModule, CursoModule, FuturoAlunoModule, ModalidadeModule],
+  imports: [PrismaModule, CursoModule, FuturoAlunoModule, ModalidadeModule, TipoModule],
   controllers: [AppController],
   providers: [AppService],
 })

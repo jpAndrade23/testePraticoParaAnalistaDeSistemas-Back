@@ -21,7 +21,6 @@ export class CursoService {
     });
   }
   findMany(nome: string) {
-    console.log(nome);
     return this.prismaService.curso.findMany({
       where: { nome: nome },
     });

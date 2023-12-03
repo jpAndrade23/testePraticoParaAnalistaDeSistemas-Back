@@ -14,14 +14,14 @@ Content-Type: application/json
 {
     "nome":"direito",
     "duracao": 5,
-    "tipo":false,
     "descricao":"curso do integrado",
-    "modalidade": "presencial",
-    "valor": 740.09
+    "valor": 740.09,
+    "tipoId": 2,
+    "modalidadeId": 2
 }
 
 ###
-GET http://localhost:3000/curso/nome/ads
+GET http://localhost:3000/curso/nome/direito
 
 
 ### 
@@ -93,3 +93,29 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/modalidade/1
+
+###
+POST http://localhost:3000/tipo
+Content-Type: application/json
+
+{
+  "nome": "Graduação"
+}
+
+###
+
+GET http://localhost:3000/tipo
+
+### 
+GET http://localhost:3000/tipo/1
+
+###
+PATCH http://localhost:3000/tipo/1
+Content-Type: application/json
+
+{
+  "nome": "Mestrado"
+}
+
+###
+DELETE http://localhost:3000/tipo/1
