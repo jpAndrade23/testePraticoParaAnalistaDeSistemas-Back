@@ -17,9 +17,9 @@ model Curso{
   descricao String
   valor Float
   modalidadeId Int
-  modalidade Modalidade @relation(fields: [modalidadeId], references: [id])
+  modalidadeDoCurso Modalidade @relation(fields: [modalidadeId], references: [id])
   tipoId Int
-  tipo Tipo @relation(fields: [tipoId], references: [id])
+  tipoDoCurso Tipo @relation(fields: [tipoId], references: [id])
   futurosAlunos Futuro_Aluno[]
 }
 
