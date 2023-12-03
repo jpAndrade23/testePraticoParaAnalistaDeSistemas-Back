@@ -67,3 +67,29 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/futuro-aluno/6
+
+###
+POST http://localhost:3000/modalidade
+Content-Type: application/json
+
+{
+  "nome": "EAD"
+}
+
+###
+
+GET http://localhost:3000/modalidade
+
+### 
+GET http://localhost:3000/modalidade/1
+
+###
+PATCH http://localhost:3000/modalidade/1
+Content-Type: application/json
+
+{
+  "nome": "Presencial"
+}
+
+###
+DELETE http://localhost:3000/modalidade/1
