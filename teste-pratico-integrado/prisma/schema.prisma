@@ -17,6 +17,7 @@ model Curso{
   descricao String
   valor Float
   modalidadeId Int
+  imagemCurso String
   modalidadeDoCurso Modalidade @relation(fields: [modalidadeId], references: [id])
   tipoId Int
   tipoDoCurso Tipo @relation(fields: [tipoId], references: [id])

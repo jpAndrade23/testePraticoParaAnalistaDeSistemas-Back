@@ -3,6 +3,7 @@ export class CreateCursoDto {
   duracao: number;
   descricao: string;
   valor: number;
+  imagemCurso: string;
   modalidadeId: number;
   tipoId: number;
 }
