@@ -25,6 +25,10 @@ export class CursoController {
   findMany(@Param('nome') nome: string) {
     return this.cursoService.findMany(nome);
   }
+  @Get('nome/:nome/:modalidade')
+  findManyNomeModalidade(@Param('nome') nome: string, @Param('modalidade') modalidade: string) {
+    return this.cursoService.findManyNomeModalidade(nome, modalidade);
+  }
   @Get('busca/:tipo/:nome')
   findOneTipo(@Param('nome') nome: string, @Param('tipo') tipo: string ) {
     return this.cursoService.findOneTipo(nome,tipo);
@@ -32,6 +36,10 @@ export class CursoController {
   @Get('busca/:tipo')
   findManyTipo( @Param('tipo') tipo: string ) {
     return this.cursoService.findManyTipo(tipo);
+  }
+  @Get('modalidade/:modalidade')
+  findManyOneModalidade( @Param('modalidade') modalidade: string ) {
+    return this.cursoService.findManyOneModalidade(modalidade);
   }
   @Get('modalidade/:tipo/:modalidade')
   findManyModalidade(@Param('modalidade') modalidade: string, @Param('tipo') tipo: string ) {

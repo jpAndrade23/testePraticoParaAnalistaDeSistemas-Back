@@ -1,6 +1,6 @@
 //http://localhost:8000/
 
-GET http://localhost:8000/curso/
+GET http://localhost:8000/curso/nome/Direito/Presencial
 
 ###
 
@@ -17,7 +17,7 @@ GET http://localhost:8000/curso/busca/graducao/direito
 GET http://localhost:8000/curso/modalidade/graducao/EAD
 ###
 
-GET http://localhost:8000/curso/modalidade/graducao/EAD/direito
+GET http://localhost:8000/curso/modalidade/Presencial
 
 
 ###
@@ -26,12 +26,12 @@ POST http://localhost:8000/curso
 Content-Type: application/json
 
 {
-    "nome":"ads",
+    "nome":"Direito",
     "duracao": 5,
     "descricao":"curso do integrado",
     "valor": 740.09,
     "tipoId": 2,
-    "modalidadeId": 2,
+    "modalidadeId": 3,
     "imagemCurso": "https://firebasestorage.googleapis.com/v0/b/endless-sol-403405.appspot.com/o/images%2FR.png?alt=media&token=ee2f4c9d-7dc5-4891-a8e1-039287bf9c2a"
 }
 
@@ -88,18 +88,18 @@ POST http://localhost:8000/modalidade
 Content-Type: application/json
 
 {
-  "nome": "EAD"
+  "nome": "Presencial"
 }
 
 ###
 
-GET http://localhost:3000/modalidade
+GET http://localhost:8000/modalidade
 
 ### 
-GET http://localhost:3000/modalidade/1
+GET http://localhost:8000/modalidade/1
 
 ###
-PATCH http://localhost:3000/modalidade/1
+PATCH http://localhost:8000/modalidade/1
 Content-Type: application/json
 
 {
@@ -107,10 +107,10 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/modalidade/1
+DELETE http://localhost:8000/modalidade/1
 
 ###
-POST http://localhost:3000/tipo
+POST http://localhost:8000/tipo
 Content-Type: application/json
 
 {
@@ -119,13 +119,13 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/tipo
+GET http://localhost:8000/tipo
 
 ### 
-GET http://localhost:3000/tipo/1
+GET http://localhost:8000/tipo/1
 
 ###
-PATCH http://localhost:3000/tipo/2
+PATCH http://localhost:8000/tipo/2
 Content-Type: application/json
 
 {
@@ -133,4 +133,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/tipo/1
+DELETE http://localhost:8000/tipo/1

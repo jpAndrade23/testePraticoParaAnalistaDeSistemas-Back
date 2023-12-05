@@ -39,6 +39,16 @@ export class CursoService {
       include: { tipoDoCurso: true, modalidadeDoCurso: true },
     });
   }
+  findManyOneModalidade( modalidade: string) {
+    return this.prismaService.curso.findMany({
+      where: { 
+        modalidadeDoCurso: {
+          nome: modalidade
+        }
+      },
+      include: { tipoDoCurso: true, modalidadeDoCurso: true },
+    });
+  }
   findOneTipo(nome: string, tipo: string) {
     return this.prismaService.curso.findMany({
       where: { 
@@ -70,6 +80,17 @@ export class CursoService {
         tipoDoCurso: {
           nome: tipo
         },
+        modalidadeDoCurso: {
+          nome: modalidade
+        }
+      },
+      include: { tipoDoCurso: true, modalidadeDoCurso: true },
+    });
+  }
+  findManyNomeModalidade( nome: string, modalidade: string) {
+    return this.prismaService.curso.findMany({
+      where: { 
+        nome: nome,
         modalidadeDoCurso: {
           nome: modalidade
         }
