@@ -1,25 +1,4 @@
 //http://localhost:8000/
-
-GET http://localhost:8000/curso
-
-###
-
-GET http://localhost:8000/curso/id/3
-
-###
-
-GET http://localhost:8000/curso/busca/graducao/
-###
-
-GET http://localhost:8000/curso/busca/graducao/direito
-###
-
-GET http://localhost:8000/curso/modalidade/graducao/EAD
-###
-
-GET http://localhost:8000/curso/modalidade/Presencial
-
-
 ###
 
 POST http://localhost:8000/curso
@@ -36,7 +15,8 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8000/curso/nome/direito
+GET http://localhost:8000/curso
+
 
 
 ### 
@@ -48,91 +28,26 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8000/curso/8
-
-###
-POST http://localhost:8000/futuro-aluno
-Content-Type: application/json
-
-{
-  "nome": "joao pedro",
-  "CPF": "12335678910",
-  "telefone": "44998176275",
-  "email": "joaopedro@gmail.com",
-  "CEP": "87250-000", 
-  "dataNascimento": "2022-09-27",
-  "imagemDoocumento": "teste",
-  "cursoId": 1
-}
+DELETE http://localhost:8000/curso/1
 
 
-###
-GET http://localhost:8000/futuro-aluno
 
-###
-GET http://localhost:8000/futuro-aluno/7
+# { exemplo de json para criar um futuro_aluno
+#   "nome": "joao pedro",
+#   "CPF": "12335678910",
+#   "telefone": "44998176275",
+#   "email": "joaopedro@gmail.com",
+#   "CEP": "87250-000", 
+#   "dataNascimento": "2022-09-27",
+#   "imagemDoocumento": "teste",
+#   "cursoId": 1
+# }
 
-###
-PATCH http://localhost:8000/futuro-aluno/7
-Content-Type: application/json
+# { exemplo de json para criar uma modalidade
+#   "nome": "Presencial"
+# }
 
-{
-  "dataNascimento": "2003-09-23"
-}
-
-###
-DELETE http://localhost:8000/futuro-aluno/3
-
-###
-POST http://localhost:8000/modalidade
-Content-Type: application/json
-
-{
-  "nome": "EAD"
-}
-
-###
-
-GET http://localhost:8000/modalidade
-
-### 
-GET http://localhost:8000/modalidade/1
-
-###
-PATCH http://localhost:8000/modalidade/1
-Content-Type: application/json
-
-{
-  "nome": "Presencial"
-}
-
-###
-DELETE http://localhost:8000/modalidade/4
-
-###
-POST http://localhost:8000/tipo
-Content-Type: application/json
-
-{
-  "nome": "Pos-Graduacao",
-  "nomeDeExibicao": "Pós-Graduação"
-}
-
-###
-
-GET http://localhost:8000/tipo
-
-### 
-GET http://localhost:8000/tipo/1
-
-###
-PATCH http://localhost:8000/tipo/2
-Content-Type: application/json
-
-{
-  "nome": "Graduacao",
-  "nomeDeExibicao": "Graduação"
-}
-
-###
-DELETE http://localhost:8000/tipo/6
+# { Exemplo de JSON para criar um tipo
+#     "nome": "Pos-Graduacao",
+#   "nomeDeExibicao": "Pós-Graduação"
+# }

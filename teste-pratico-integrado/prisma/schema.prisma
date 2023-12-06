@@ -41,7 +41,7 @@ model Modalidade{
 model Futuro_Aluno{
   id Int @id @default(autoincrement()) @unique
   nome String
-  CPF String @unique
+  CPF String 
   telefone String
   email String
   CEP String 
