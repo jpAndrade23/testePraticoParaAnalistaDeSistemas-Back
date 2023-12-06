@@ -1,0 +1,138 @@
+//http://localhost:8000/
+
+GET http://localhost:8000/curso
+
+###
+
+GET http://localhost:8000/curso/id/3
+
+###
+
+GET http://localhost:8000/curso/busca/graducao/
+###
+
+GET http://localhost:8000/curso/busca/graducao/direito
+###
+
+GET http://localhost:8000/curso/modalidade/graducao/EAD
+###
+
+GET http://localhost:8000/curso/modalidade/Presencial
+
+
+###
+
+POST http://localhost:8000/curso
+Content-Type: application/json
+
+{
+    "nome":"ADS",
+    "duracao": 5,
+    "descricao":"curso do integrado",
+    "valor": 740.09,
+    "tipoId": 2,
+    "modalidadeId": 2,
+    "imagemCurso": "https://firebasestorage.googleapis.com/v0/b/endless-sol-403405.appspot.com/o/images%2FR.png?alt=media&token=ee2f4c9d-7dc5-4891-a8e1-039287bf9c2a"
+}
+
+###
+GET http://localhost:8000/curso/nome/direito
+
+
+### 
+PATCH http://localhost:8000/curso/1
+Content-Type: application/json
+
+{
+    "duracao": 2.5
+}
+
+###
+DELETE http://localhost:8000/curso/8
+
+###
+POST http://localhost:8000/futuro-aluno
+Content-Type: application/json
+
+{
+  "nome": "joao pedro",
+  "CPF": "12335678910",
+  "telefone": "44998176275",
+  "email": "joaopedro@gmail.com",
+  "CEP": "87250-000", 
+  "dataNascimento": "2022-09-27",
+  "imagemDoocumento": "teste",
+  "cursoId": 1
+}
+
+
+###
+GET http://localhost:8000/futuro-aluno
+
+###
+GET http://localhost:8000/futuro-aluno/7
+
+###
+PATCH http://localhost:8000/futuro-aluno/7
+Content-Type: application/json
+
+{
+  "dataNascimento": "2003-09-23"
+}
+
+###
+DELETE http://localhost:8000/futuro-aluno/3
+
+###
+POST http://localhost:8000/modalidade
+Content-Type: application/json
+
+{
+  "nome": "EAD"
+}
+
+###
+
+GET http://localhost:8000/modalidade
+
+### 
+GET http://localhost:8000/modalidade/1
+
+###
+PATCH http://localhost:8000/modalidade/1
+Content-Type: application/json
+
+{
+  "nome": "Presencial"
+}
+
+###
+DELETE http://localhost:8000/modalidade/4
+
+###
+POST http://localhost:8000/tipo
+Content-Type: application/json
+
+{
+  "nome": "Pos-Graduacao",
+  "nomeDeExibicao": "Pós-Graduação"
+}
+
+###
+
+GET http://localhost:8000/tipo
+
+### 
+GET http://localhost:8000/tipo/1
+
+###
+PATCH http://localhost:8000/tipo/2
+Content-Type: application/json
+
+{
+  "nome": "Graduacao",
+  "nomeDeExibicao": "Graduação"
+}
+
+###
+DELETE http://localhost:8000/tipo/6
