@@ -1,10 +1,10 @@
 //http://localhost:8000/
 
-GET http://localhost:8000/curso/nome/Direito/Presencial
+GET http://localhost:8000/curso
 
 ###
 
-GET http://localhost:8000/curso/id/1
+GET http://localhost:8000/curso/id/3
 
 ###
 
@@ -26,12 +26,12 @@ POST http://localhost:8000/curso
 Content-Type: application/json
 
 {
-    "nome":"Direito",
+    "nome":"ads",
     "duracao": 5,
     "descricao":"curso do integrado",
     "valor": 740.09,
-    "tipoId": 2,
-    "modalidadeId": 3,
+    "tipoId": 6,
+    "modalidadeId": 2,
     "imagemCurso": "https://firebasestorage.googleapis.com/v0/b/endless-sol-403405.appspot.com/o/images%2FR.png?alt=media&token=ee2f4c9d-7dc5-4891-a8e1-039287bf9c2a"
 }
 
@@ -114,7 +114,7 @@ POST http://localhost:8000/tipo
 Content-Type: application/json
 
 {
-  "nome": "graduacao"
+  "nome": "Pos-Graduacao"
 }
 
 ###
@@ -129,7 +129,7 @@ PATCH http://localhost:8000/tipo/2
 Content-Type: application/json
 
 {
-  "nome": "graducao"
+  "nome": "Graduacao"
 }
 
 ###

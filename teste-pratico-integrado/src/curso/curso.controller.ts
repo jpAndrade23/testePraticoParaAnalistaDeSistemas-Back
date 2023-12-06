@@ -21,31 +21,38 @@ export class CursoController {
   findOne(@Param('id') id: string) {
     return this.cursoService.findOne(+id);
   }
+  
   @Get('nome/:nome')
   findMany(@Param('nome') nome: string) {
     return this.cursoService.findMany(nome);
   }
-  @Get('nome/:nome/:modalidade')
-  findManyNomeModalidade(@Param('nome') nome: string, @Param('modalidade') modalidade: string) {
-    return this.cursoService.findManyNomeModalidade(nome, modalidade);
-  }
-  @Get('busca/:tipo/:nome')
-  findOneTipo(@Param('nome') nome: string, @Param('tipo') tipo: string ) {
-    return this.cursoService.findOneTipo(nome,tipo);
-  }
+
   @Get('busca/:tipo')
   findManyTipo( @Param('tipo') tipo: string ) {
     return this.cursoService.findManyTipo(tipo);
   }
+
   @Get('modalidade/:modalidade')
   findManyOneModalidade( @Param('modalidade') modalidade: string ) {
     return this.cursoService.findManyOneModalidade(modalidade);
   }
-  @Get('modalidade/:tipo/:modalidade')
+
+  @Get('nome/:modalidade/:nome')
+  findManyNomeModalidade(@Param('nome') nome: string, @Param('modalidade') modalidade: string) {
+    return this.cursoService.findManyNomeModalidade(nome, modalidade);
+  }
+
+  @Get('busca/:tipo/:nome/')
+  findOneTipo(@Param('nome') nome: string, @Param('tipo') tipo: string ) {
+    return this.cursoService.findOneTipo(nome,tipo);
+  }
+  
+  @Get('modalidade/:tipo/:modalidade/')
   findManyModalidade(@Param('modalidade') modalidade: string, @Param('tipo') tipo: string ) {
     return this.cursoService.findManyModalidade(tipo, modalidade);
   }
-  @Get('modalidade/:tipo/:modalidade/:nome')
+
+  @Get('modalidade/:tipo/:modalidade/:nome/')
   findOneModalidade(@Param('modalidade') modalidade: string, @Param('tipo') tipo: string, @Param('nome') nome: string ) {
     return this.cursoService.findOneModalidade(tipo, modalidade, nome);
   }
